@@ -1,23 +1,32 @@
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Lógica para abrir/fechar o menu mobile
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
-            // Fechar menu mobile ao clicar em um link
-            const menuLinks = mobileMenu.querySelectorAll('a');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
+document.addEventListener('DOMContentLoaded', () => {
+  // Smooth Scroll para links da navegação
+  const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         });
-    </script>
-</body>
-</html>
+      }
+    });
+  });
+
+  // Manipulação de cliques nos links do rodapé (Aviso de demonstração)
+  const repoLink = document.getElementById('repoLink');
+  const docsLink = document.getElementById('docsLink');
+
+  [repoLink, docsLink].forEach(element => {
+    if (element) {
+      element.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Este é um link de demonstração para o seu projeto escolar.');
+      });
+    }
+  });
+});
