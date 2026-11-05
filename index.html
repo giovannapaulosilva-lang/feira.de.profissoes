@@ -1,330 +1,210 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artista | As artes são os olhos da mente</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter & Playfair Display -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
- <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md text-white shadow-lg border-b border-slate-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#D96B43] to-[#E5A93C] flex items-center justify-center text-white shadow-md">
-                        <i class="fa-solid fa-palette text-lg"></i>
-                    </div>
-                    <div>
-                        <h1 class="font-serif text-2xl font-bold tracking-tight text-white">Artista</h1>
-                        <p class="text-xs italic text-[#E5A93C] tracking-wide">As artes são os olhos da mente</p>
-                    </div>
-                </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artista | As artes são os olhos da mente</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-                <!-- Navegação Desktop -->
-                <nav class="hidden md:flex space-x-6 text-sm font-medium">
-                    <a href="#rotina" class="hover:text-[#E5A93C] transition-colors flex items-center gap-1.5"><i class="fa-solid fa-paintbrush text-xs"></i> Rotina</a>
-                    <a href="#historico" class="hover:text-[#E5A93C] transition-colors flex items-center gap-1.5"><i class="fa-solid fa-landmark text-xs"></i> História</a>
-                    <a href="#obras" class="hover:text-[#E5A93C] transition-colors flex items-center gap-1.5"><i class="fa-solid fa-image text-xs"></i> Obras Famosas</a>
-                    <a href="#desenhistas" class="hover:text-[#E5A93C] transition-colors flex items-center gap-1.5"><i class="fa-solid fa-pen-nib text-xs"></i> Artistas Digitais</a>
-                    <a href="#mercado" class="hover:text-[#E5A93C] transition-colors flex items-center gap-1.5"><i class="fa-solid fa-chart-line text-xs"></i> Mercado</a>
-                </nav>
+  <!-- Cabeçalho / Banner -->
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">Profissão & Revelação</div>
+      <h1>Artista</h1>
+      <p class="slogan">"As artes são os olhos da mente"</p>
+      
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#sobre">Sobre a Carreira</a></li>
+          <li><a href="#historia">Fatos Históricos</a></li>
+          <li><a href="#galeria">Obras & Nomes</a></li>
+          <li><a href="#mercado">Panorama & Mercado</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-                <!-- Botão Menu Mobile -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" aria-label="Abrir menu" class="text-slate-300 hover:text-white focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+  <main class="container">
 
-        <!-- Menu Mobile Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
-            <a href="#rotina" class="block py-2 text-slate-200 hover:text-[#E5A93C]">Rotina & Atribuições</a>
-            <a href="#historico" class="block py-2 text-slate-200 hover:text-[#E5A93C]">Fatos Históricos</a>
-            <a href="#obras" class="block py-2 text-slate-200 hover:text-[#E5A93C]">Obras Clássicas</a>
-            <a href="#desenhistas" class="block py-2 text-slate-200 hover:text-[#E5A93C]">Desenhistas Digitais</a>
-            <a href="#mercado" class="block py-2 text-slate-200 hover:text-[#E5A93C]">Mercado & Dados</a>
-        </div>
-    </header>
+    <!-- Seção 1: Sobre a Carreira -->
+    <section id="sobre" class="card">
+      <h2>Sobre a Carreira</h2>
+      <p class="lead">A profissão de artista vai muito além da expressão visual: é a ponte entre a percepção humana, a cultura e a inovação estética da sociedade.</p>
+      
+      <div class="grid grid-2">
+        <article class="info-box">
+          <h3>Rotina & Atribuições</h3>
+          <ul>
+            <li><strong>Pesquisa e Conceituação:</strong> Estudo de referências, moods, contextos históricos e narrativas.</li>
+            <li><strong>Esboço e Prototipagem:</strong> Criação de thumbnails, estudos de composição e teoria das cores.</li>
+            <li><strong>Execução Técnica:</strong> Aplicação de técnicas tradicionais (tinta, escultura) ou softwares digitais (Photoshop, Procreate, Blender).</li>
+            <li><strong>Gestão de Carreira:</strong> Elaboração de portfólios, prospecção de clientes e presença digital.</li>
+          </ul>
+        </article>
 
-    <!-- HERO BANNER -->
-    <section class="relative art-gradient text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-            <span class="inline-block px-4 py-1.5 rounded-full bg-[#D96B43]/30 text-[#E5A93C] text-xs font-semibold uppercase tracking-wider mb-4 border border-[#D96B43]/40">Guia Profissional Completo</span>
-            <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-                Expressando a Alma,<br/> Moldando a Cultura.
-            </h2>
-            <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 mb-8 leading-relaxed">
-                Descubra a trajetória, o impacto social, as grandes obras da humanidade e a revolução da arte digital.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#rotina" class="bg-[#D96B43] hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-xl shadow-lg transition-all flex items-center gap-2">
-                    Explorar Carreira <i class="fa-solid fa-arrow-down"></i>
-                </a>
-            </div>
-        </div>
+        <article class="info-box">
+          <h3>Importância Social</h3>
+          <p>O artista documenta e questiona a realidade de sua época. Suas produções influenciam diretamente a arquitetura, o design industrial, o entretenimento, a moda e a saúde mental humana através da apreciação estética e empática.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- MAIN CONTENT -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+    <!-- Seção 2: Fatos Históricos -->
+    <section id="historia" class="card">
+      <h2>Fatos Históricos & Evolução</h2>
+      
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-badge">Pré-História</div>
+          <div class="timeline-content">
+            <h3>Origem da Profissão</h3>
+            <p>Surgiu nas pinturas rupestres (como nas cavernas de Altamira e Chauvet), onde a arte possuía caráter ritualístico, narrativo e mágico-religioso.</p>
+          </div>
+        </article>
 
-        <!-- SEÇÃO 1: ROTINA E IMPORTÂNCIA -->
-        <section id="rotina" class="scroll-mt-28">
-            <div class="border-l-4 border-[#D96B43] pl-4 mb-8">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Rotina, Atribuições e Importância</h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">O dia a dia criativo e o valor cultural para a humanidade</p>
-            </div>
+        <article class="timeline-item">
+          <div class="timeline-badge">Renascimento</div>
+          <div class="timeline-content">
+            <h3>A Ascensão do Artista Cientista</h3>
+            <p>Mestres como Leonardo da Vinci e Michelangelo estabeleceram o artista como pensador, anatomista e matemático, elevando o status de mero artesão para intelectual.</p>
+          </div>
+        </article>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <!-- Rotina -->
-                <article class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                    <div class="w-12 h-12 rounded-xl bg-orange-100 text-[#D96B43] flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-user-pen"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3">Rotina e Atribuições</h3>
-                    <p class="text-slate-600 mb-4 leading-relaxed text-sm sm:text-base">
-                        A rotina de um artista exige alta disciplina, pesquisa conceitual e refinamento metodológico contínuo:
-                    </p>
-                    <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
-                        <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-check text-[#D96B43] mt-1"></i>
-                            <span><strong>Pesquisa & Concept:</strong> Estudo de referências visuais, teoria das cores e composição.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-check text-[#D96B43] mt-1"></i>
-                            <span><strong>Esboços (Thumbnails):</strong> Criação de rascunhos para exploração narrativa.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-check text-[#D96B43] mt-1"></i>
-                            <span><strong>Execução Técnica:</strong> Uso de telas, tinta, esculturas ou softwares digitais (Photoshop, Blender, Procreate).</span>
-                        </li>
-                    </ul>
-                </article>
+        <article class="timeline-item">
+          <div class="timeline-badge">Séc. XIX - XX</div>
+          <div class="timeline-content">
+            <h3>Revolução Industrial e Fotografia</h3>
+            <p>A invenção da fotografia libertou a arte da obrigação de apenas replicar o real, dando origem às vanguardas modernas (Impressionismo, Cubismo, Surrealismo).</p>
+          </div>
+        </article>
 
-                <!-- Importância Social -->
-                <article class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-[#E5A93C] flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-heart-pulse"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3">Importância para a Sociedade</h3>
-                    <p class="text-slate-600 mb-4 leading-relaxed text-sm sm:text-base">
-                        Os artistas preservam a memória coletiva e impulsionam o desenvolvimento cultural:
-                    </p>
-                    <div class="space-y-4 text-slate-600">
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                            <h4 class="font-bold text-slate-900 text-base flex items-center gap-2">
-                                <i class="fa-solid fa-brain text-[#D96B43]"></i> Impacto Emocional e Crítico
-                            </h4>
-                            <p class="mt-1 text-sm">Provoca reflexões e estimula a empatia social diante de transformações do mundo.</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                            <h4 class="font-bold text-slate-900 text-base flex items-center gap-2">
-                                <i class="fa-solid fa-coins text-[#E5A93C]"></i> Economia Criativa
-                            </h4>
-                            <p class="mt-1 text-sm">Alimenta indústrias globais como cinema, animação, games, moda e arquitetura.</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
+        <article class="timeline-item">
+          <div class="timeline-badge">Séc. XXI</div>
+          <div class="timeline-content">
+            <h3>Era Digital & Telas</h3>
+            <p>Mesa digitalizadora, modelagem 3D, realidade virtual e inteligência artificial transformaram a produção artística em uma indústria multibilionária de mídia e entretenimento.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <!-- SEÇÃO 2: FATOS HISTÓRICOS -->
-        <section id="historico" class="scroll-mt-28">
-            <div class="border-l-4 border-[#E5A93C] pl-4 mb-8">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Fatos Históricos</h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">Origem da profissão e os marcos de evolução social e tecnológica</p>
-            </div>
+    <!-- Seção 3: Obras e Artistas Famosos -->
+    <section id="galeria" class="card">
+      <h2>Galeria: Obras Clássicas & Artistas Digitais</h2>
 
-            <div class="relative border-l-2 border-slate-300 ml-4 md:ml-32 space-y-8 my-8">
-                <div class="relative pl-6 md:pl-8">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#D96B43] border-4 border-slate-100"></div>
-                    <span class="hidden md:block absolute -left-32 top-1 text-xs font-bold text-[#D96B43] uppercase">Pré-História</span>
-                    <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-1">Pinturas Rupestres</h3>
-                        <p class="text-slate-600 text-sm">Primeiras manifestações visuais da humanidade registradas em cavernas como Chauvet e Altamira.</p>
-                    </article>
-                </div>
+      <h3>Obras Clássicas Consagradas</h3>
+      <div class="grid grid-2 gallery-grid">
+        <article class="media-card">
+          <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80" alt="Pintura a óleo estilo clássico" loading="lazy">
+          <div class="media-info">
+            <h4>Mona Lisa</h4>
+            <p><em>Leonardo da Vinci (c. 1503–1519)</em></p>
+            <p>Marco do Renascimento, famosa pelo uso da técnica de <em>sfumato</em>.</p>
+          </div>
+        </article>
 
-                <div class="relative pl-6 md:pl-8">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#E5A93C] border-4 border-slate-100"></div>
-                    <span class="hidden md:block absolute -left-32 top-1 text-xs font-bold text-[#E5A93C] uppercase">Renascentismo</span>
-                    <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-1">Nascimento do Artista Individual</h3>
-                        <p class="text-slate-600 text-sm">Com Da Vinci e Michelangelo, a arte deixa de ser apenas ofício manual e ganha status de ciência e filosofia visual.</p>
-                    </article>
-                </div>
+        <article class="media-card">
+          <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80" alt="Obra de arte expressionista com pinceladas marcantes" loading="lazy">
+          <div class="media-info">
+            <h4>A Noite Estrelada</h4>
+            <p><em>Vincent van Gogh (1889)</em></p>
+            <p>Ícone do Pós-Impressionismo com texturas vibrantes e carga emotiva.</p>
+          </div>
+        </article>
+      </div>
 
-                <div class="relative pl-6 md:pl-8">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-600 border-4 border-slate-100"></div>
-                    <span class="hidden md:block absolute -left-32 top-1 text-xs font-bold text-purple-600 uppercase">Era Digital</span>
-                    <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <h3 class="font-serif text-xl font-bold text-slate-900 mb-1">Computação Gráfica e Software</h3>
-                        <p class="text-slate-600 text-sm">Mesas digitalizadoras, pintura digital e softwares de 3D transformam radicalmente o alcance e as possibilidades criativas.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
+      <h3 class="margin-top">Desenhistas Digitais de Destaque</h3>
+      <div class="grid grid-2">
+        <article class="artist-profile">
+          <h4>Lois van Baarle (Loish)</h4>
+          <p class="role">Ilustradora e Concept Artist</p>
+          <p>Reconhecida mundialmente pelo estilo fluído, paleta de cores harmoniosa e expressividade no desenho de personagens digitais.</p>
+        </article>
 
-        <!-- SEÇÃO 3: GALERIA DE OBRAS DE ARTISTAS FAMOSOS -->
-        <section id="obras" class="scroll-mt-28">
-            <div class="border-l-4 border-terracotta pl-4 mb-8">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Obras Clássicas Famosas</h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">Pinturas icônicas que moldaram a história das artes visuais</p>
-            </div>
+        <article class="artist-profile">
+          <h4>Craig Mullins</h4>
+          <p class="role">Pioneiro da Pintura Digital</p>
+          <p>Considerado o pai do concept art digital para cinema e jogos (trabalhos em <em>Matrix</em>, <em>Age of Empires</em> e <em>Halo</em>).</p>
+        </article>
+      </div>
+    </section>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Mona Lisa -->
-                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm gallery-card">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Mona Lisa por Leonardo da Vinci" class="w-full h-full object-cover">
-                        <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur-sm">1503</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-bold text-slate-900">Mona Lisa</h3>
-                        <p class="text-xs font-semibold text-[#D96B43] mb-2">Leonardo da Vinci</p>
-                        <p class="text-slate-600 text-sm leading-relaxed">Famosa pelo enigmático sorriso e pelo uso da técnica do *sfumato*, sendo uma das obras mais reconhecidas do mundo.</p>
-                    </div>
-                </article>
+    <!-- Seção 4: Panorama e Mercado -->
+    <section id="mercado" class="card">
+      <h2>Panorama Atual e Mercado de Trabalho</h2>
 
-                <!-- A Noite Estrelada -->
-                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm gallery-card">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80" alt="A Noite Estrelada por Vincent van Gogh" class="w-full h-full object-cover">
-                        <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur-sm">1889</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-bold text-slate-900">A Noite Estrelada</h3>
-                        <p class="text-xs font-semibold text-[#D96B43] mb-2">Vincent van Gogh</p>
-                        <p class="text-slate-600 text-sm leading-relaxed">Obra-prima do pós-impressionismo com pinceladas vibrantes e expressivas representando o céu noturno em Saint-Rémy.</p>
-                    </div>
-                </article>
-
-                <!-- Abaporu -->
-                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm gallery-card">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80" alt="Obra de arte moderna representativa" class="w-full h-full object-cover">
-                        <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur-sm">1928</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-bold text-slate-900">Abaporu</h3>
-                        <p class="text-xs font-semibold text-[#D96B43] mb-2">Tarsila do Amaral</p>
-                        <p class="text-slate-600 text-sm leading-relaxed">Símbolo do Movimento Antropofágico no Brasil, representando a valorização da identidade visual e cultural brasileira.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- SEÇÃO 4: DESENHISTAS E ARTISTAS DIGITAIS -->
-        <section id="desenhistas" class="scroll-mt-28">
-            <div class="border-l-4 border-[#E5A93C] pl-4 mb-8">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Desenhistas e Artistas Digitais</h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">Referências contemporâneas que moldam a indústria de games, cinema e ilustração</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Loish -->
-                <article class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Retrato do conceito artístico de Loish" class="w-24 h-24 rounded-full object-cover mb-4 border-2 border-[#E5A93C]">
-                    <h3 class="font-serif text-lg font-bold text-slate-900">Loish</h3>
-                    <span class="text-xs font-semibold text-slate-500 mb-2">Lois van Baarle</span>
-                    <p class="text-xs text-slate-600 leading-relaxed">Ilustradora digital holandesa famosa por seu estilo orgânico, fluidez de linhas e paletas de cores harmônicas.</p>
-                </article>
-
-                <!-- Craig Mullins -->
-                <article class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Retrato artístico de Craig Mullins" class="w-24 h-24 rounded-full object-cover mb-4 border-2 border-[#D96B43]">
-                    <h3 class="font-serif text-lg font-bold text-slate-900">Craig Mullins</h3>
-                    <span class="text-xs font-semibold text-slate-500 mb-2">Concept Artist</span>
-                    <p class="text-xs text-slate-600 leading-relaxed">Pioneiro absoluto da pintura digital na indústria de cinema e games (*Matrix*, *Age of Empires*, *Halo*).</p>
-                </article>
-
-                <!-- Willian Santiago -->
-                <article class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Retrato de Willian Santiago" class="w-24 h-24 rounded-full object-cover mb-4 border-2 border-[#E5A93C]">
-                    <h3 class="font-serif text-lg font-bold text-slate-900">Willian Santiago</h3>
-                    <span class="text-xs font-semibold text-slate-500 mb-2">Ilustrador Brasileiro</span>
-                    <p class="text-xs text-slate-600 leading-relaxed">Ilustrador premiado por suas composições ricas em cores vibrantes, brasilidade e formas marcantes.</p>
-                </article>
-
-                <!-- Sam Yang -->
-                <article class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col items-center text-center">
-                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=400&q=80" alt="Retrato de Sam Yang" class="w-24 h-24 rounded-full object-cover mb-4 border-2 border-[#D96B43]">
-                    <h3 class="font-serif text-lg font-bold text-slate-900">Sam Yang</h3>
-                    <span class="text-xs font-semibold text-slate-500 mb-2">SamSpratt</span>
-                    <p class="text-xs text-slate-600 leading-relaxed">Artista digital aclamado por retratos expressivos, uso impressionante de luz e arte conceitual narrativa.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- SEÇÃO 5: PANORAMA ATUAL E MERCADO -->
-        <section id="mercado" class="scroll-mt-28">
-            <div class="border-l-4 border-slate-900 pl-4 mb-8">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Panorama Atual e Mercado</h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">Estatísticas, faixas salariais e comparativo de empregabilidade</p>
-            </div>
-
-            <!-- Stats -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Média Salarial</p>
-                    <p class="text-3xl font-extrabold text-[#D96B43]">R$ 3.500 - R$ 12.000+</p>
-                    <p class="text-xs text-slate-400 mt-2">Dependendo da experiência e setor</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Área em Alta</p>
-                    <p class="text-3xl font-extrabold text-[#E5A93C]">Concept & 3D Art</p>
-                    <p class="text-xs text-slate-400 mt-2">Games e Animação 3D</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Atuação Global</p>
-                    <p class="text-3xl font-extrabold text-slate-900">68% Freelance</p>
-                    <p class="text-xs text-slate-400 mt-2">Trabalho remoto internacional</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ==========================================
-         RODAPÉ / CRÉDITOS ACADÊMICOS
-         ========================================== -->
-    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h3 class="font-serif text-xl font-bold text-white mb-2">Artista</h3>
-                    <p class="text-xs text-slate-400 italic">"As artes são os olhos da mente"</p>
-                    <p class="text-xs text-slate-400 mt-4 leading-relaxed">
-                        Projeto acadêmico dedicado à profissão de artista visual e digital.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Créditos Acadêmicos</h4>
-                    <ul class="space-y-2 text-sm text-slate-400">
-                        <li><strong>Aluno:</strong> Nome do Aluno</li>
-                        <li><strong>Turma:</strong> Turma X - 2026</li>
-                        <li><strong>Disciplina:</strong> Tecnologias Web / História da Arte</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Links do Projeto</h4>
-                    <div class="flex flex-col space-y-2 text-sm">
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#E5A93C] transition-colors flex items-center gap-2">
-                            <i class="fa-brands fa-github text-base"></i> Repositório GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
-                <p>&copy; 2026 Projeto Educacional. Todos os direitos reservados.</p>
-            </div>
+      <div class="grid grid-3 stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">R$ 4.200</div>
+          <div class="stat-label">Média Salarial Inicial (BR)</div>
+          <p>Pode ultrapassar R$ 12.000/mês para Concept Artists Senior no mercado internacional.</p>
         </div>
-    </footer>
+
+        <div class="stat-card">
+          <div class="stat-number">+18%</div>
+          <div class="stat-label">Crescimento do Mercado Digital</div>
+          <p>Projeção de expansão nas áreas de games, Animação, UI/UX e efeitos visuais (VFX).</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number">65%</div>
+          <div class="stat-label">Atuação Freelancer</div>
+          <p>Grande parte dos profissionais atua de forma autônoma e remota globalmente.</p>
+        </div>
+      </div>
+
+      <h3 class="margin-top">Comparativo de Empregabilidade</h3>
+      <div class="grid grid-2">
+        <article class="info-box border-left-accent">
+          <h3>🎨 Artistas Físicos / Tradicionais</h3>
+          <ul>
+            <li><strong>Áreas:</strong> Galerias de arte, Restauro, Ilustração editorial, Encomendas privadas.</li>
+            <li><strong>Tendência:</strong> Valorização do produto único, artesanal e colecionável.</li>
+            <li><strong>Desafio:</strong> Custos com materiais e dependência de espaços de exposição.</li>
+          </ul>
+        </article>
+
+        <article class="info-box border-left-secondary">
+          <h3>💻 Artistas Digitais / Ilustradores</h3>
+          <ul>
+            <li><strong>Áreas:</strong> Indústria de Games, Animação 2D/3D, Publicidade, Concept Art.</li>
+            <li><strong>Tendência:</strong> Alta demanda por profissionais multidisciplinares.</li>
+            <li><strong>Desafio:</strong> Adaptação contínua a novas ferramentas e softwares de IA.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé / Créditos -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="student-info">
+        <h3>Créditos do Projeto</h3>
+        <p><strong>Nome Completo:</strong> Seu Nome Completo</p>
+        <p><strong>Turma:</strong> 3º Ano A - Ensino Médio</p>
+        <p><strong>Disciplina:</strong> Artes / Desenvolvimento Web</p>
+      </div>
+
+      <div class="project-links">
+        <h4>Links de Acesso</h4>
+        <ul>
+          <li><a href="#" id="repoLink">Repositório do Projeto (GitHub)</a></li>
+          <li><a href="#" id="docsLink">Documentação Complementar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 - Desenvolvido para fins educacionais.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
