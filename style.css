@@ -1,1 +1,52 @@
+  <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
+        /* Configuração de Cores e Tipografia */
+        :root {
+            --color-terracotta: #D96B43;
+            --color-artGold: #E5A93C;
+            --color-slateDark: #1E293B;
+            --color-canvasBg: #F8F6F0;
+        }
+
+        body {
+            background-color: var(--color-canvasBg);
+            color: var(--color-slateDark);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Efeitos e Gradientes */
+        .art-gradient {
+            background: linear-gradient(135deg, #1E293B 0%, #334155 50%, #D96B43 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px -10px rgba(217, 107, 67, 0.25);
+        }
+
+        /* Modal Overlay para zoom em obras */
+        .modal-overlay {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Animação suave para os cards */
+        .gallery-card img {
+            transition: transform 0.5s ease;
+        }
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-canvasBg text-slate-800 font-sans antialiased selection:bg-terracotta selection:text-white">
